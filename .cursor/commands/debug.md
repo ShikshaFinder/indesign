@@ -1,0 +1,2 @@
+this project uses 21st.dev , i am trying to use prebuilt component but i am facing errors , analyze the code ,check for TS errors , analyze the code , and suggest fixes , if any thing is needed from the shadcn then install using command npx shadcn@latest add
+first read all the relavent code , genrate the plan then implement it . 
