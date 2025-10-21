@@ -4,14 +4,26 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  { title: "Modern Living Room", url: "https://picsum.photos/id/870/600/1000" },
-  { title: "Elegant Bedroom", url: "https://picsum.photos/id/883/600/1000" },
+  {
+    title: "Modern Living Room",
+    url: "/drive-download-20251020T160936Z-1-001/IMG_3630.JPEG",
+  },
+  {
+    title: "Elegant Bedroom",
+    url: "/drive-download-20251020T160936Z-1-001/IMG_3631.JPEG",
+  },
   {
     title: "Contemporary Kitchen",
-    url: "https://picsum.photos/id/478/600/1000",
+    url: "/drive-download-20251020T160936Z-1-001/IMG_3632.JPEG",
   },
-  { title: "Luxury Bathroom", url: "https://picsum.photos/id/903/600/1000" },
-  { title: "Cozy Study Room", url: "https://picsum.photos/id/503/600/1000" },
+  {
+    title: "Luxury Bathroom",
+    url: "/drive-download-20251020T160936Z-1-001/IMG_3634.JPEG",
+  },
+  {
+    title: "Cozy Study Room",
+    url: "/drive-download-20251020T160936Z-1-001/IMG_3635.JPEG",
+  },
 ];
 
 const FLIP_SPEED = 750;

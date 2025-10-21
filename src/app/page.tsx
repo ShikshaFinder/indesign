@@ -21,6 +21,7 @@ import {
 import FlipGallery from "@/components/flip-gallery";
 import MobileNavbar from "@/components/mobile-navbar";
 import DesktopNavbar from "@/components/desktop-navbar";
+import StickyScroll from "@/components/sticky-scroll";
 
 export default function InteriorDesignHome() {
   const whatsappLink = "https://wa.me/918529594634";
@@ -112,6 +113,37 @@ export default function InteriorDesignHome() {
               <FlipGallery />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Portfolio Sticky Scroll Gallery */}
+      <section
+        id="portfolio"
+        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-800"
+      >
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-8 text-center">
+            Portfolio
+          </h2>
+
+          {/* Use images from public folder. These are relative paths under /public */}
+          <StickyScroll
+            leftImages={[
+              "/Beena Nair Adani Atrius-20251020T161139Z-1-001/Beena Nair Adani Atrius/1.jpg",
+              "/Beena Nair Adani Atrius-20251020T161139Z-1-001/Beena Nair Adani Atrius/2.jpg",
+              "/Beena Nair Adani Atrius-20251020T161139Z-1-001/Beena Nair Adani Atrius/3.jpg",
+            ]}
+            centerImages={[
+              "/Manoj Hansora-20251020T161215Z-1-001/Manoj Hansora/1.jpeg",
+              "/Manoj Hansora-20251020T161215Z-1-001/Manoj Hansora/2.jpeg",
+              "/Manoj Hansora-20251020T161215Z-1-001/Manoj Hansora/3.jpeg",
+            ]}
+            rightImages={[
+              "/Nilesh Shah Adani Atrius-20251020T161243Z-1-001/Nilesh Shah Adani Atrius/1.jpg",
+              "/Nilesh Shah Adani Atrius-20251020T161243Z-1-001/Nilesh Shah Adani Atrius/2.jpg",
+              "/Nilesh Shah Adani Atrius-20251020T161243Z-1-001/Nilesh Shah Adani Atrius/3(1).jpg",
+            ]}
+          />
         </div>
       </section>
 
