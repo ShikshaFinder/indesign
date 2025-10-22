@@ -11,10 +11,6 @@ const images = [
     url: "/drive-download-20251020T160936Z-1-001/IMG_3630.JPEG",
   },
   {
-    title: "Elegant Bedroom",
-    url: "/drive-download-20251020T160936Z-1-001/IMG_3631.JPEG",
-  },
-  {
     title: "Contemporary Kitchen",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3632.JPEG",
   },

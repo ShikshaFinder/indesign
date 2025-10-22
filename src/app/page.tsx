@@ -76,15 +76,16 @@ export default function InteriorDesignHome() {
                   variant="outline"
                   size="lg"
                   className="text-lg px-8 py-6"
+                  asChild
                 >
-                  View Portfolio
+                  <a href="/#portfolio">View Portfolio</a>
                 </Button>
               </div>
 
               <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-6 sm:pt-8">
                 <div className="text-center">
                   <div className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
-                    500+
+                    5+
                   </div>
                   <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
                     Projects Completed
@@ -92,7 +93,7 @@ export default function InteriorDesignHome() {
                 </div>
                 <div className="text-center">
                   <div className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
-                    15+
+                    5+
                   </div>
                   <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
                     Years Experience
@@ -202,6 +203,45 @@ export default function InteriorDesignHome() {
                 </CardDescription>
               </CardHeader>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section
+        id="about"
+        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900"
+      >
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4 text-center">
+            About Elegant Interiors
+          </h2>
+          <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto text-center">
+            Elegant Interiors is a boutique design studio focused on creating
+            thoughtful, functional spaces with a modern and timeless aesthetic.
+            Our team combines creativity, craftsmanship and attention to detail
+            to deliver interiors that truly reflect you.
+          </p>
+
+          <div className="mt-10 grid sm:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-2">Our Approach</h3>
+              <p className="text-slate-600 dark:text-slate-300">
+                We start by understanding your needs and preferences, then craft
+                tailored design solutions that balance beauty and utility. From
+                concept to execution, we ensure a seamless experience and
+                outstanding results.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-2">Our Team</h3>
+              <p className="text-slate-600 dark:text-slate-300">
+                Our experienced designers and project managers work closely with
+                trusted trades to bring each project to life on time and on
+                budget.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -327,16 +367,7 @@ export default function InteriorDesignHome() {
               </ul>
             </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-slate-300">
-                <li>About Us</li>
-                <li>Portfolio</li>
-                <li>Testimonials</li>
-                <li>Blog</li>
-              </ul>
-            </div>
-
+           
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-slate-300">
