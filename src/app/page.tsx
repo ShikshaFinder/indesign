@@ -48,10 +48,15 @@ export default function InteriorDesignHome() {
                   Premium Interior Design
                 </Badge>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-slate-100 leading-tight">
-                  Transform Your Space Into
-                  <span className="text-slate-600 dark:text-slate-400">
+                  WE GIVE  <span className="text-blue-700 dark:text-slate-400">
                     {" "}
-                    Art
+                    AAKAR
+                  </span> TO YOUR DREAMS
+THROUGH 
+
+                  <span className="text-blue-500 dark:text-slate-400">
+                    {" "}
+                    DESIGN
                   </span>
                 </h1>
                 <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -135,10 +140,7 @@ export default function InteriorDesignHome() {
           </div>
 
           <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
-            <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 dark:text-slate-100">
-              WE GIVE AAKAR TO YOUR DREAMS
-              <br className="hidden sm:block" /> THROUGH DESIGN
-            </h3>
+          
             <p className="text-slate-600 dark:text-slate-300">
               At our studio, we believe design is all about giving shape to ideas. Every curve, line, and form is
               thoughtfully crafted to create spaces that reflect personality, function with ease, and inspire everyday living.
@@ -200,9 +202,7 @@ export default function InteriorDesignHome() {
                 FREE SITE VISIT • BOOK NOW
               </a>
             </Button>
-            <div className="w-36 h-36 rounded-md border-2 border-dashed border-slate-300 dark:border-slate-600 grid place-content-center text-center text-xs text-slate-500 dark:text-slate-400">
-              SCAN QR CODE
-            </div>
+          
           </div>
 
           <div className="text-center text-sm text-slate-500 dark:text-slate-400 space-y-1">
