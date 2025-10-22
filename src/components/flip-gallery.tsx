@@ -75,18 +75,20 @@ export default function FlipGallery() {
   }, []);
 
   const defineFirstImg = () => {
-    uniteRef.current.forEach(setActiveImage);
-    setImageTitle();
+    uniteRef.current.forEach((el) => setActiveImage(el, currentIndex));
+    setImageTitle(currentIndex);
   };
 
-  const setActiveImage = (el: HTMLElement) => {
-    el.style.backgroundImage = `url('${images[currentIndex].url}')`;
+  const setActiveImage = (el: HTMLElement, idx?: number) => {
+    const indexToUse = typeof idx === "number" ? idx : currentIndex;
+    el.style.backgroundImage = `url('${images[indexToUse].url}')`;
   };
 
-  const setImageTitle = () => {
+  const setImageTitle = (idx?: number) => {
+    const indexToUse = typeof idx === "number" ? idx : currentIndex;
     const gallery = containerRef.current;
     if (!gallery) return;
-    gallery.setAttribute("data-title", images[currentIndex].title);
+    gallery.setAttribute("data-title", images[indexToUse].title);
     gallery.style.setProperty("--title-y", "0");
     gallery.style.setProperty("--title-opacity", "1");
   };
@@ -117,11 +119,11 @@ export default function FlipGallery() {
           ? FLIP_SPEED - 200
           : 0;
 
-      setTimeout(() => setActiveImage(el), delay);
+      setTimeout(() => setActiveImage(el, nextIndex), delay);
     });
 
-    // reveal new title roughly half‑way through animation
-    setTimeout(setImageTitle, FLIP_SPEED * 0.5);
+    // reveal new title roughly half‑way through animation (use nextIndex)
+    setTimeout(() => setImageTitle(nextIndex), FLIP_SPEED * 0.5);
   };
 
   const updateIndex = (increment: number) => {

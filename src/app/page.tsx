@@ -85,7 +85,7 @@ export default function InteriorDesignHome() {
               <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-6 sm:pt-8">
                 <div className="text-center">
                   <div className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
-                    5+
+                    50+
                   </div>
                   <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
                     Projects Completed

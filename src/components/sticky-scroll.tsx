@@ -1,6 +1,7 @@
 "use client";
 import { ReactLenis } from "lenis/react";
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
+import { X } from "lucide-react";
 
 interface StickyScrollProps {
   leftImages?: string[];
@@ -42,6 +43,28 @@ const Component = forwardRef<HTMLElement, StickyScrollProps>(
     const right =
       rightImages && rightImages.length ? rightImages : defaultRight;
 
+    // Lightbox state: when an image is clicked, show overlay with enlarged image
+    const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+
+    const closeLightbox = () => setLightboxSrc(null);
+    const openLightbox = (src: string) => setLightboxSrc(src);
+
+    // Prevent body scroll when lightbox is open and close on ESC
+    useEffect(() => {
+      if (lightboxSrc) {
+        const original = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        const onKey = (e: KeyboardEvent) => {
+          if (e.key === "Escape") closeLightbox();
+        };
+        window.addEventListener("keydown", onKey);
+        return () => {
+          document.body.style.overflow = original;
+          window.removeEventListener("keydown", onKey);
+        };
+      }
+    }, [lightboxSrc]);
+
     return (
       <ReactLenis root>
         <main className={"bg-black " + (className ?? "")} ref={ref}>
@@ -67,7 +90,8 @@ const Component = forwardRef<HTMLElement, StickyScrollProps>(
                     <img
                       src={src}
                       alt=""
-                      className="transition-all duration-300 w-full h-96  align-bottom object-cover rounded-md "
+                      onClick={() => openLightbox(src)}
+                      className="transition-all duration-300 w-full h-96  align-bottom object-cover rounded-md cursor-zoom-in"
                     />
                   </figure>
                 ))}
@@ -81,7 +105,8 @@ const Component = forwardRef<HTMLElement, StickyScrollProps>(
                     <img
                       src={src}
                       alt=""
-                      className="transition-all duration-300 h-full w-full  align-bottom object-cover rounded-md "
+                      onClick={() => openLightbox(src)}
+                      className="transition-all duration-300 h-full w-full  align-bottom object-cover rounded-md cursor-zoom-in"
                     />
                   </figure>
                 ))}
@@ -93,13 +118,60 @@ const Component = forwardRef<HTMLElement, StickyScrollProps>(
                     <img
                       src={src}
                       alt=""
-                      className="transition-all duration-300 w-full h-96  align-bottom object-cover rounded-md "
+                      onClick={() => openLightbox(src)}
+                      className="transition-all duration-300 w-full h-96  align-bottom object-cover rounded-md cursor-zoom-in"
                     />
                   </figure>
                 ))}
               </div>
             </div>
           </section>
+
+          {/* Lightbox Overlay */}
+          {lightboxSrc && (
+            <div
+              className="fixed inset-0 z-[100]"
+              role="dialog"
+              aria-modal="true"
+              onClick={closeLightbox}
+            >
+              {/* Blurred image as background */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: `url(${lightboxSrc})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  filter: "blur(20px) brightness(0.7)",
+                  transform: "scale(1.1)",
+                }}
+              />
+              {/* Gradient overlay for emphasis */}
+              <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/70" />
+
+              {/* Close button */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  closeLightbox();
+                }}
+                aria-label="Close"
+                className="absolute top-4 right-4 p-2 rounded-full bg-black/60 text-white hover:bg-black/80 transition"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              {/* Expanded image */}
+              <div className="relative z-10 w-full h-full flex items-center justify-center p-4">
+                <img
+                  src={lightboxSrc}
+                  alt="Expanded view"
+                  onClick={(e) => e.stopPropagation()}
+                  className="max-h-[90vh] max-w-[95vw] object-contain rounded-lg shadow-2xl"
+                />
+              </div>
+            </div>
+          )}
 
           <footer className="group bg-slate-950 ">
             <h1 className="text-[16vw]  translate-y-20 leading-[100%] uppercase font-semibold text-center bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear">
