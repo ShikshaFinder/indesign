@@ -21,7 +21,7 @@ export default function DesktopNavbar({ whatsappLink }: DesktopNavbarProps) {
         <div className="flex items-center space-x-2">
           <Home className="h-8 w-8 text-slate-700 dark:text-slate-300" />
           <span className="text-2xl font-bold text-slate-800 dark:text-slate-200">
-            Elegant Interiors
+            Aakar design studio
           </span>
         </div>
 

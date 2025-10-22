@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Interiors - Premium Interior Design",
+  title: "Aakar design studio - Premium Interior Design",
   description:
     "Transform your space with our premium interior design services. Modern, elegant, and functional designs that reflect your unique style.",
 };

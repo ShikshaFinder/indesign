@@ -214,10 +214,10 @@ export default function InteriorDesignHome() {
       >
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4 text-center">
-            About Elegant Interiors
+            About Aakar design studio
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto text-center">
-            Elegant Interiors is a boutique design studio focused on creating
+            Aakar design studio is a boutique design studio focused on creating
             thoughtful, functional spaces with a modern and timeless aesthetic.
             Our team combines creativity, craftsmanship and attention to detail
             to deliver interiors that truly reflect you.
@@ -307,7 +307,7 @@ export default function InteriorDesignHome() {
                     Visit Us
                   </h3>
                   <p className="text-slate-600 dark:text-slate-300">
-                    Mumbai, Maharashtra, India
+                    Bhaktinagar Society, Gurukul road Memnagar Ahmedabad 380052
                   </p>
                 </div>
               </div>
@@ -350,7 +350,7 @@ export default function InteriorDesignHome() {
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
                 <Home className="h-8 w-8" />
-                <span className="text-2xl font-bold">Elegant Interiors</span>
+                <span className="text-2xl font-bold">Aakar design studio</span>
               </div>
               <p className="text-slate-300">
                 Creating beautiful, functional spaces that inspire and delight.
@@ -373,7 +373,7 @@ export default function InteriorDesignHome() {
               <ul className="space-y-2 text-slate-300">
                 <li>+91 85295 94634</li>
                 <li>info@elegantinteriors.com</li>
-                <li>Mumbai, India</li>
+                <li>Bhaktinagar Society, Gurukul road Memnagar Ahmedabad 380052</li>
               </ul>
             </div>
           </div>
@@ -381,7 +381,7 @@ export default function InteriorDesignHome() {
           <Separator className="my-8 bg-slate-700" />
 
           <div className="text-center text-slate-400">
-            <p>&copy; 2024 Elegant Interiors. All rights reserved.</p>
+            <p>&copy; 2024 Aakar design studio. All rights reserved.</p>
           </div>
         </div>
       </footer>

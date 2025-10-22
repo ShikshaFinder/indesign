@@ -35,7 +35,7 @@ export default function MobileNavbar({ whatsappLink }: MobileNavbarProps) {
     {
       icon: MapPin,
       label: "Visit Us",
-      value: "Mumbai, Maharashtra, India",
+      value: "Bhaktinagar Society, Gurukul road Memnagar Ahmedabad 380052",
       href: "#",
     },
   ];
@@ -47,7 +47,7 @@ export default function MobileNavbar({ whatsappLink }: MobileNavbarProps) {
         <div className="flex items-center space-x-2">
           <Home className="h-8 w-8 text-slate-700 dark:text-slate-300" />
           <span className="text-xl font-bold text-slate-800 dark:text-slate-200">
-            Elegant Interiors
+            Aakar design studio
           </span>
         </div>
 
@@ -70,7 +70,7 @@ export default function MobileNavbar({ whatsappLink }: MobileNavbarProps) {
                 <div className="flex items-center space-x-2">
                   <Home className="h-8 w-8 text-slate-700 dark:text-slate-300" />
                   <span className="text-xl font-bold text-slate-800 dark:text-slate-200">
-                    Elegant Interiors
+                    Aakar design studio
                   </span>
                 </div>
                 <Button
