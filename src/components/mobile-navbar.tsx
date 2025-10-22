@@ -35,7 +35,7 @@ export default function MobileNavbar({ whatsappLink }: MobileNavbarProps) {
     {
       icon: MapPin,
       label: "Visit Us",
-      value: "Bhaktinagar Society, Gurukul road Memnagar Ahmedabad 380052",
+      value: "Bhakti Nagar Society, Memnagar, Ahmedabad",
       href: "#",
     },
   ];

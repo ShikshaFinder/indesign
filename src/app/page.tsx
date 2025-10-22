@@ -117,6 +117,105 @@ export default function InteriorDesignHome() {
         </div>
       </section>
 
+      {/* Festive Offers / Studio Details */}
+      <section
+        id="offers"
+        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center space-y-3 mb-10">
+            <Badge variant="secondary" className="w-fit mx-auto">
+              <Star className="w-4 h-4 mr-2" /> Special Festive Offers
+            </Badge>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
+              AAKAR DESIGN STUDIO • VASTU VISHWA ARCHITECTS
+            </h2>
+            <p className="text-slate-600 dark:text-slate-300">IN COLLABORATION WITH</p>
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400">AHMEDABAD | VERAVAL | DELHI</p>
+          </div>
+
+          <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
+            <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 dark:text-slate-100">
+              WE GIVE AAKAR TO YOUR DREAMS
+              <br className="hidden sm:block" /> THROUGH DESIGN
+            </h3>
+            <p className="text-slate-600 dark:text-slate-300">
+              At our studio, we believe design is all about giving shape to ideas. Every curve, line, and form is
+              thoughtfully crafted to create spaces that reflect personality, function with ease, and inspire everyday living.
+            </p>
+          </div>
+
+          {/* Pricing grid */}
+          <div className="grid gap-4 sm:gap-6 sm:grid-cols-3 mb-8">
+            {[
+              { bhk: "2BHK", old: "₹44,500*", now: "₹29,999*" },
+              { bhk: "3BHK", old: "₹49,500*", now: "₹34,999*" },
+              { bhk: "4BHK", old: "₹54,500*", now: "₹39,999*" },
+            ].map((p) => (
+              <Card key={p.bhk} className="h-full">
+                <CardHeader>
+                  <CardTitle className="text-xl">{p.bhk}</CardTitle>
+                  <CardDescription className="flex items-baseline gap-2">
+                    <span className="line-through text-slate-400">{p.old}</span>
+                    <span className="text-lg font-semibold text-emerald-600 dark:text-emerald-400">{p.now}</span>
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+
+          {/* Consultancy and categories */}
+          <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 mb-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-base">DESIGN CONSULTANCY</CardTitle>
+                <CardDescription>STARTING FROM</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="text-slate-700 dark:text-slate-200">AREA - Rs. 50 Per Sq.Ft</div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-base">RESIDENTIAL</CardTitle>
+                <CardDescription>Design & Execution</CardDescription>
+              </CardHeader>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-base">COMMERCIAL</CardTitle>
+                <CardDescription>Design & Execution</CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+
+          <p className="text-center text-sm text-slate-500 dark:text-slate-400 mb-6">
+            TURNKEY PROJECT PRICES (AS PER YOUR REQUIREMENTS)
+          </p>
+
+          {/* CTA row */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
+            <Button size="lg" asChild>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                FREE SITE VISIT • BOOK NOW
+              </a>
+            </Button>
+            <div className="w-36 h-36 rounded-md border-2 border-dashed border-slate-300 dark:border-slate-600 grid place-content-center text-center text-xs text-slate-500 dark:text-slate-400">
+              SCAN QR CODE
+            </div>
+          </div>
+
+          <div className="text-center text-sm text-slate-500 dark:text-slate-400 space-y-1">
+            <p>FESTIVE OFFERS VALID TILL DIWALI</p>
+            <p>VISIT TO OUR ONGOING PROJECTS</p>
+            <p>Bhakti Nagar Society, Memnagar, Ahmedabad</p>
+            <p>
+              <span className="font-medium">+91 8529594634</span> — ID. Pramil • <span className="font-medium">+91 7228063914</span> — AR. Yashvant
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Portfolio Sticky Scroll Gallery */}
       <section
         id="portfolio"
@@ -307,7 +406,7 @@ export default function InteriorDesignHome() {
                     Visit Us
                   </h3>
                   <p className="text-slate-600 dark:text-slate-300">
-                    Bhaktinagar Society, Gurukul road Memnagar Ahmedabad 380052
+                    Bhakti Nagar Society, Memnagar, Ahmedabad
                   </p>
                 </div>
               </div>
@@ -371,9 +470,10 @@ export default function InteriorDesignHome() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-slate-300">
-                <li>+91 85295 94634</li>
+                <li>+91 8529594634</li>
+                <li>+91 7228063914</li>
                 <li>info@elegantinteriors.com</li>
-                <li>Bhaktinagar Society, Gurukul road Memnagar Ahmedabad 380052</li>
+                <li>Bhakti Nagar Society, Memnagar, Ahmedabad</li>
               </ul>
             </div>
           </div>
