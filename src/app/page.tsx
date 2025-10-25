@@ -156,16 +156,20 @@ THROUGH
         className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900"
       >
         <div className="max-w-7xl mx-auto">
-          <div className="text-center space-y-3 mb-10">
+            <div className="text-center space-y-3 mb-10">
             <Badge variant="secondary" className="w-fit mx-auto">
-              <Star className="w-4 h-4 mr-2" /> Special Festive Offers
+              <Star className="w-4 h-4 mr-2" /> Special Offers
             </Badge>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
-              AAKAR DESIGN STUDIO • VASTU VISHWA ARCHITECTS
+              <span className="text-black ">AAKAR DESIGN STUDIO</span>
+              <br />
+              <span className="text-sm font-normal text-slate-600 dark:text-slate-400">in collaboration with</span>
+              <br />
+              <span className="text-black ">VASTU VISHWA ARCHITECTS</span>
             </h2>
-            <p className="text-slate-600 dark:text-slate-300">IN COLLABORATION WITH</p>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400">AHMEDABAD | VERAVAL | DELHI</p>
-          </div>
+            </div>
+
 
           <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
             <p className="text-slate-600 dark:text-slate-300">
@@ -385,10 +389,10 @@ THROUGH
                     Email Us
                   </h3>
                   <a
-                    href="mailto:info@elegantinteriors.com"
+                    href="mailto:info@aakardesign.studio"
                     className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100"
                   >
-                    info@elegantinteriors.com
+                    info@aakardesign.studio
                   </a>
                 </div>
               </div>
@@ -468,7 +472,7 @@ THROUGH
               <ul className="space-y-2 text-slate-300">
                 <li>+91 8529594634</li>
                 <li>+91 7228063914</li>
-                <li>info@elegantinteriors.com</li>
+                <li>info@aakardesign.studio</li>
                 <li>Bhakti Nagar Society, Memnagar, Ahmedabad</li>
               </ul>
             </div>

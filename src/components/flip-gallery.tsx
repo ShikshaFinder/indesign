@@ -7,27 +7,27 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
   {
-    title: "Modern Living Room",
+    title: "Designs which speak",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3630.JPEG",
   },
   {
-    title: "Elegant Bedroom",
+    title: "Love your space",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3631.JPEG",
   },
   {
-    title: "Spacious Dining Area",
+    title: "Stylish Living Area",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3651.JPEG",
   },
   {
-    title: "Contemporary Kitchen",
+    title: "Elegant Designs",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3632.JPEG",
   },
   {
-    title: "Luxury Bathroom",
+    title: "Luxurious Finishes",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3634.JPEG",
   },
   {
-    title: "Cozy Study Room",
+    title: "Comfort Meets Style",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3635.JPEG",
   },
 ];

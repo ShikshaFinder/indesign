@@ -29,8 +29,8 @@ export default function MobileNavbar({ whatsappLink }: MobileNavbarProps) {
     {
       icon: Mail,
       label: "Email Us",
-      value: "info@elegantinteriors.com",
-      href: "mailto:info@elegantinteriors.com",
+      value: "info@aakardesign.studio",
+      href: "mailto:info@aakardesign.studio",
     },
     {
       icon: MapPin,
@@ -125,7 +125,7 @@ export default function MobileNavbar({ whatsappLink }: MobileNavbarProps) {
                             {contact.value}
                           </a>
                         ) : contact.href ===
-                          "mailto:info@elegantinteriors.com" ? (
+                          "mailto:info@aakardesign.studio" ? (
                           <a
                             href={contact.href}
                             className="text-sm text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100"
