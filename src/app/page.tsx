@@ -149,6 +149,16 @@ THROUGH
               "/Nilesh Shah Adani Atrius-20251020T161243Z-1-001/Nilesh Shah Adani Atrius/3(1).jpg",
             ]}
           />
+
+          {/* View All Gallery CTA */}
+          <div className="mt-12 text-center">
+            <Button size="lg" asChild className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+              <a href="/gallery">
+                View Complete Gallery
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
  <section
