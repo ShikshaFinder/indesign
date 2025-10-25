@@ -9,26 +9,110 @@ const images = [
   {
     title: "Designs which speak",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3630.JPEG",
+    aspectRatio: "portrait" as const,
   },
   {
     title: "Love your space",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3631.JPEG",
+    aspectRatio: "portrait" as const,
   },
   {
     title: "Stylish Living Area",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3651.JPEG",
+    aspectRatio: "portrait" as const,
   },
   {
     title: "Elegant Designs",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3632.JPEG",
+    aspectRatio: "portrait" as const,
   },
   {
     title: "Luxurious Finishes",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3634.JPEG",
+    aspectRatio: "portrait" as const,
   },
   {
     title: "Comfort Meets Style",
     url: "/drive-download-20251020T160936Z-1-001/IMG_3635.JPEG",
+    aspectRatio: "portrait" as const,
+  },
+  // Beena Nair Adani Atrius
+  {
+    title: "Modern Living Space",
+    url: "/Beena Nair Adani Atrius-20251020T161139Z-1-001/Beena Nair Adani Atrius/1.jpg",
+    aspectRatio: "landscape" as const,
+  },
+  {
+    title: "Contemporary Design",
+    url: "/Beena Nair Adani Atrius-20251020T161139Z-1-001/Beena Nair Adani Atrius/2.jpg",
+    aspectRatio: "landscape" as const,
+  },
+  {
+    title: "Sophisticated Interiors",
+    url: "/Beena Nair Adani Atrius-20251020T161139Z-1-001/Beena Nair Adani Atrius/3.jpg",
+    aspectRatio: "landscape" as const,
+  },
+  {
+    title: "Elegant Bedroom",
+    url: "/Beena Nair Adani Atrius-20251020T161139Z-1-001/Beena Nair Adani Atrius/4.jpg",
+    aspectRatio: "landscape" as const,
+  },
+  {
+    title: "Warm & Inviting",
+    url: "/Beena Nair Adani Atrius-20251020T161139Z-1-001/Beena Nair Adani Atrius/5.jpg",
+    aspectRatio: "landscape" as const,
+  },
+  // Manoj Hansora
+  {
+    title: "Chic Living Room",
+    url: "/Manoj Hansora-20251020T161215Z-1-001/Manoj Hansora/1.jpeg",
+    aspectRatio: "landscape" as const,
+  },
+  {
+    title: "Stylish Comfort",
+    url: "/Manoj Hansora-20251020T161215Z-1-001/Manoj Hansora/2.jpeg",
+    aspectRatio: "landscape" as const,
+  },
+  {
+    title: "Cozy Ambiance",
+    url: "/Manoj Hansora-20251020T161215Z-1-001/Manoj Hansora/3.jpeg",
+    aspectRatio: "landscape" as const,
+  },
+  {
+    title: "Refined Details",
+    url: "/Manoj Hansora-20251020T161215Z-1-001/Manoj Hansora/4.jpeg",
+    aspectRatio: "landscape" as const,
+  },
+  {
+    title: "Timeless Elegance",
+    url: "/Manoj Hansora-20251020T161215Z-1-001/Manoj Hansora/5.jpeg",
+    aspectRatio: "landscape" as const,
+  },
+  // Nilesh Shah Adani Atrius
+  {
+    title: "Premium Finishes",
+    url: "/Nilesh Shah Adani Atrius-20251020T161243Z-1-001/Nilesh Shah Adani Atrius/1.jpg",
+    aspectRatio: "landscape" as const,
+  },
+  {
+    title: "Luxury Living",
+    url: "/Nilesh Shah Adani Atrius-20251020T161243Z-1-001/Nilesh Shah Adani Atrius/2.jpg",
+    aspectRatio: "landscape" as const,
+  },
+  {
+    title: "Modern Aesthetics",
+    url: "/Nilesh Shah Adani Atrius-20251020T161243Z-1-001/Nilesh Shah Adani Atrius/3(1).jpg",
+    aspectRatio: "landscape" as const,
+  },
+  {
+    title: "Designer Kitchen",
+    url: "/Nilesh Shah Adani Atrius-20251020T161243Z-1-001/Nilesh Shah Adani Atrius/4(2).jpg",
+    aspectRatio: "landscape" as const,
+  },
+  {
+    title: "Artistic Spaces",
+    url: "/Nilesh Shah Adani Atrius-20251020T161243Z-1-001/Nilesh Shah Adani Atrius/5.jpg",
+    aspectRatio: "landscape" as const,
   },
 ];
 
@@ -63,6 +147,7 @@ export default function FlipGallery() {
   const containerRef = useRef<HTMLDivElement>(null);
   const uniteRef = useRef<HTMLElement[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLandscape, setIsLandscape] = useState(false);
 
   // initialise first image once
   useEffect(() => {
@@ -75,6 +160,8 @@ export default function FlipGallery() {
   }, []);
 
   const defineFirstImg = () => {
+    const currentAspect = images[currentIndex].aspectRatio;
+    setIsLandscape(currentAspect === "landscape");
     uniteRef.current.forEach((el) => setActiveImage(el, currentIndex));
     setImageTitle(currentIndex);
   };
@@ -130,6 +217,8 @@ export default function FlipGallery() {
     const inc = Number(increment);
     const newIndex = (currentIndex + inc + images.length) % images.length;
     const isReverse = inc < 0;
+    const newAspect = images[newIndex].aspectRatio;
+    setIsLandscape(newAspect === "landscape");
     setCurrentIndex(newIndex);
     updateGallery(newIndex, isReverse);
   };
@@ -148,8 +237,13 @@ export default function FlipGallery() {
         <div
           id="flip-gallery"
           ref={containerRef}
-          className="relative w-[240px] h-[400px] md:w-[300px] md:h-[500px] text-center"
+          className={`relative text-center transition-all duration-300 ${
+            isLandscape
+              ? "w-[320px] h-[240px] md:w-[500px] md:h-[375px]"
+              : "w-[240px] h-[400px] md:w-[300px] md:h-[500px]"
+          }`}
           style={{ perspective: "800px" }}
+          data-aspect={isLandscape ? "landscape" : "portrait"}
         >
           <div className="top unite bg-cover bg-no-repeat"></div>
           <div className="bottom unite bg-cover bg-no-repeat"></div>
@@ -209,12 +303,23 @@ export default function FlipGallery() {
           width: 100%;
           height: 50%;
           overflow: hidden;
+        }
+
+        #flip-gallery[data-aspect="portrait"] > * {
           background-size: 240px 400px;
         }
 
+        #flip-gallery[data-aspect="landscape"] > * {
+          background-size: 320px 240px;
+        }
+
         @media (min-width: 600px) {
-          #flip-gallery > * {
+          #flip-gallery[data-aspect="portrait"] > * {
             background-size: 300px 500px;
+          }
+
+          #flip-gallery[data-aspect="landscape"] > * {
+            background-size: 500px 375px;
           }
         }
 
