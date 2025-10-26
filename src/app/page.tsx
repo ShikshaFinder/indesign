@@ -59,10 +59,8 @@ THROUGH
                     DESIGN
                   </span>
                 </h1>
-                <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Create stunning, functional interiors that reflect your unique
-                  style. Our expert designers bring your vision to life with
-                  modern elegance and timeless appeal.
+                <p className="text-xl sm:text-2xl md:text-3xl text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+                  Transform Your Space Into Art That Inspire & Delight
                 </p>
               </div>
 
@@ -191,9 +189,9 @@ THROUGH
           {/* Pricing grid */}
           <div className="grid gap-4 sm:gap-6 sm:grid-cols-3 mb-8">
             {[
-              { bhk: "2BHK", old: "₹44,500*", now: "₹29,999*" },
-              { bhk: "3BHK", old: "₹49,500*", now: "₹34,999*" },
-              { bhk: "4BHK", old: "₹54,500*", now: "₹39,999*" },
+              { bhk: "2BHK", old: "₹44,550*", now: "₹29,999*" },
+              { bhk: "3BHK", old: "₹34,550*", now: "₹34,999*" },
+              { bhk: "4BHK", old: "₹54,550*", now: "₹39,999*" },
             ].map((p) => (
               <Card key={p.bhk} className="h-full">
                 <CardHeader>
@@ -208,7 +206,7 @@ THROUGH
           </div>
 
           {/* Consultancy and categories */}
-          <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 mb-8">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-8">
             <Card>
               <CardHeader>
                 <CardTitle className="text-base">DESIGN CONSULTANCY</CardTitle>
@@ -220,21 +218,11 @@ THROUGH
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle className="text-base">RESIDENTIAL</CardTitle>
-                <CardDescription>Design & Execution</CardDescription>
-              </CardHeader>
-            </Card>
-            <Card>
-              <CardHeader>
                 <CardTitle className="text-base">COMMERCIAL</CardTitle>
-                <CardDescription>Design & Execution</CardDescription>
+                <CardDescription>AREA - Rs. 50 Per Sq.Ft</CardDescription>
               </CardHeader>
             </Card>
           </div>
-
-          <p className="text-center text-sm text-slate-500 dark:text-slate-400 mb-6">
-            TURNKEY PROJECT PRICES (AS PER YOUR REQUIREMENTS)
-          </p>
 
           {/* CTA row */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
@@ -246,7 +234,6 @@ THROUGH
           </div>
 
           <div className="text-center text-sm text-slate-500 dark:text-slate-400 space-y-1">
-            <p>FESTIVE OFFERS VALID TILL DIWALI</p>
             <p>VISIT TO OUR ONGOING PROJECTS</p>
             <p>Bhakti Nagar Society, Memnagar, Ahmedabad</p>
             <p>
@@ -326,10 +313,9 @@ THROUGH
             About Aakar design studio
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto text-center">
-            Aakar design studio is a boutique design studio focused on creating
-            thoughtful, functional spaces with a modern and timeless aesthetic.
-            Our team combines creativity, craftsmanship and attention to detail
-            to deliver interiors that truly reflect you.
+            At Aakar design studio, we believe design is all about giving shape to ideas. 
+            Every curve, line, and form is thoughtfully crafted to create spaces that 
+            reflect personality, function with ease, and inspire everyday living.
           </p>
 
           <div className="mt-10 grid sm:grid-cols-2 gap-8">
@@ -381,12 +367,26 @@ THROUGH
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
                     Call Us
                   </h3>
-                  <a
-                    href={whatsappLink}
-                    className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100"
-                  >
-                    +91 85295 94634
-                  </a>
+                  <div className="text-slate-600 dark:text-slate-300">
+                    <a
+                      href="tel:+918529594634"
+                      className="hover:text-slate-900 dark:hover:text-slate-100 block"
+                    >
+                      +91 85295 94634
+                    </a>
+                    <a
+                      href="tel:+917228063914"
+                      className="hover:text-slate-900 dark:hover:text-slate-100 block"
+                    >
+                      +91 72280 63914
+                    </a>
+                    <a
+                      href="tel:+919998984430"
+                      className="hover:text-slate-900 dark:hover:text-slate-100 block"
+                    >
+                      +91 99989 84430
+                    </a>
+                  </div>
                 </div>
               </div>
 

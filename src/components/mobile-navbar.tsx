@@ -23,7 +23,7 @@ export default function MobileNavbar({ whatsappLink }: MobileNavbarProps) {
     {
       icon: Phone,
       label: "Call Us",
-      value: "+91 85295 94634",
+      value: ["+91 85295 94634", "+91 72280 63914", "+91 99989 84430"],
       href: whatsappLink,
     },
     {
@@ -115,7 +115,19 @@ export default function MobileNavbar({ whatsappLink }: MobileNavbarProps) {
                         <p className="text-sm font-medium text-slate-900 dark:text-slate-100">
                           {contact.label}
                         </p>
-                        {contact.href === whatsappLink ? (
+                        {Array.isArray(contact.value) ? (
+                          <div className="space-y-1">
+                            {contact.value.map((phone, idx) => (
+                              <a
+                                key={idx}
+                                href={`tel:${phone.replace(/\s/g, "")}`}
+                                className="text-sm text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 block"
+                              >
+                                {phone}
+                              </a>
+                            ))}
+                          </div>
+                        ) : contact.href === whatsappLink ? (
                           <a
                             href={contact.href}
                             target="_blank"
