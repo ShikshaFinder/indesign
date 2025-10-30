@@ -205,6 +205,11 @@ THROUGH
             ))}
           </div>
 
+          {/* Pricing note */}
+          <p className="text-center text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-8">
+            Prices are updateable & negotiable according to your needs and requirements.
+          </p>
+
           {/* Consultancy and categories */}
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-8">
             <Card>
