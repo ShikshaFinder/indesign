@@ -59,7 +59,7 @@ THROUGH
                     DESIGN
                   </span>
                 </h1>
-                <p className="text-xl sm:text-2xl md:text-3xl text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+                <p className="text-xl sm:text-xl md:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
                   Transform Your Space Into Art That Inspire & Delight
                 </p>
               </div>
@@ -318,11 +318,7 @@ THROUGH
             About Aakar design studio
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto text-center">
-            At Aakar design studio, we believe design is all about giving shape to ideas. 
-            Every curve, line, and form is thoughtfully crafted to create spaces that 
-            reflect personality, function with ease, and inspire everyday living.
-          </p>
-
+          At our studio, we believe design is all about giving shape to ideas. Every curve, line, and form is thoughtfully crafted to create spaces that reflect personality, function with ease, and inspire everyday living.         </p>
           <div className="mt-10 grid sm:grid-cols-2 gap-8">
             <div>
               <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-2">Our Approach</h3>
